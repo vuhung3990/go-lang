@@ -27,6 +27,15 @@ func main() {
 		fmt.Printf("number: %d\n", i);
 	}
 
+	// while
+	i := 0;
+	for i < 10 {
+		fmt.Printf("while: %d\n", i);
+
+		// next
+		i++
+	}
+
 	// conditional
 	fmt.Println("===============================");
 	if isTrue {
@@ -95,7 +104,7 @@ func main() {
 		fmt.Println("range s: ", i, v);
 	}
 
-	for k, v:= range m{
-		fmt.Println("range map: ",k, v);
+	for k, v := range m {
+		fmt.Println("range map: ", k, v);
 	}
 }
