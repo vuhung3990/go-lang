@@ -3,12 +3,16 @@
 # ~~~~
 
 module:testrunner
-
+# ================================================================================== #
 # home
 GET     /                                       App.Index
 # sample route
 GET     /hello                                  App.Hello
 
+# sample post data
+POST    /createAccount                          App.CreateAccount
+
+# ================================================================================== #
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
