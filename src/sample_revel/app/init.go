@@ -2,25 +2,9 @@ package app
 
 import (
 	"github.com/revel/revel"
-	"github.com/jinzhu/gorm"
-	_ "github.com/go-sql-driver/mysql" // please import mysql driver (if not have please install)
-	"sample_revel/app/model"
 )
 
 func init() {
-	// init database
-	revel.OnAppStart(func() {
-
-		// connection string -> user:password@host/database
-		db, err := gorm.Open("mysql", "root:@/test?charset=utf8&parseTime=True")
-		if err != nil {
-			panic(err)
-		}
-
-		// auto migrate model table
-		db.AutoMigrate(&model.User{})
-	})
-
 	// Filters is the default set of global filters.
 	revel.Filters = []revel.Filter{
 		revel.PanicFilter, // Recover from panics and display an error page instead.

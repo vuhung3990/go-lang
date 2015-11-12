@@ -2,19 +2,18 @@ package controllers
 
 import (
 	"github.com/revel/revel"
-// please import mysql driver (if not have please install)
-	_ "github.com/go-sql-driver/mysql"
 	"time"
 )
 
-type App struct {
-	*revel.Controller
+type Application struct {
+	GormController
 }
 
-func (c App) Index() revel.Result {
+func (c Application) Index() revel.Result {
 	// get constant from setting
 	revel.INFO.Println(revel.Config.StringDefault("db.database", "ban anh trien"))
 
+	//	c.db.NewRecord(model.User{Name:"hung vu", Address:"thai hoa", Age:25})
 	return c.Render()
 }
 
