@@ -1,1 +1,13 @@
-# go run Application.go Controllers.go
+################# install ####################
+
+# route
+go get github.com/gin-gonic/gin
+
+# database
+go get -u github.com/jinzhu/gorm
+
+# mysql driver for database
+go get github.com/go-sql-driver/mysql
+
+################# running ####################
+go run Application.go Controllers.go Models
