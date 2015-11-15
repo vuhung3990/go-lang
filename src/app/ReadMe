@@ -8,6 +8,8 @@ go get -u github.com/jinzhu/gorm
 
 # mysql driver for database
 go get github.com/go-sql-driver/mysql
+# postgresSQL driver
+go get github.com/lib/pq
 
 ################# running ####################
-go run Application.go Controllers.go Models
+go run Application.go Controllers.go Models.go
